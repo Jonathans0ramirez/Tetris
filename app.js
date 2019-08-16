@@ -2,9 +2,9 @@
 var express = require('express');
 var app = express();
 var path = require('path');
-var partida = {palabra:"",pista:"" };
+var port = process.env.PORT || 3000;
 
-var serv = app.listen(2000);
+var serv = app.listen(port);
 
 app.get('/',function(req, res) {
 	res.sendFile(path.join(__dirname , 'publico','index.html'));
